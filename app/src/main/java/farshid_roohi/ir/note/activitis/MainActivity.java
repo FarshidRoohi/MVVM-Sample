@@ -55,13 +55,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initViewModel() {
-        Observer<List<NoteEntity>> noteObserver =
-                new Observer<List<NoteEntity>>() {
-                    @Override
-                    public void onChanged(@Nullable List<NoteEntity> noteEntities) {
-                        noteAdapter.putNotes(noteEntities);
-                    }
-                };
+        Observer<List<NoteEntity>> noteObserver = noteEntities ->
+                noteAdapter.putNotes(noteEntities);
 
         this.mViewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         this.mViewModel.notes.observe(this, noteObserver);
@@ -71,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         this.mRecyclerView.setHasFixedSize(true);
         LinearLayoutManager manager = new LinearLayoutManager(this);
         this.mRecyclerView.setLayoutManager(manager);
-        this.noteAdapter = new NoteAdapter(new ArrayList<NoteEntity>());
+        this.noteAdapter = new NoteAdapter(new ArrayList<>());
         this.mRecyclerView.setAdapter(this.noteAdapter);
 
         DividerItemDecoration divider = new

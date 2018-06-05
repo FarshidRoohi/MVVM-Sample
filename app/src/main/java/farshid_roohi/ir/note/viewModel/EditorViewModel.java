@@ -26,12 +26,9 @@ public class EditorViewModel extends AndroidViewModel {
     }
 
     public void loadNote(final int idNote) {
-        this.executor.execute(new Runnable() {
-            @Override
-            public void run() {
-                NoteEntity noteEntity = mRepository.getNoteById(idNote);
-                mLiveNote.postValue(noteEntity);
-            }
+        this.executor.execute(() -> {
+            NoteEntity noteEntity = mRepository.getNoteById(idNote);
+            mLiveNote.postValue(noteEntity);
         });
 
     }

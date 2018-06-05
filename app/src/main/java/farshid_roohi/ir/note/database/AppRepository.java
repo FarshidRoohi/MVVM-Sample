@@ -29,12 +29,7 @@ public class AppRepository {
     }
 
     public void addSampleData() {
-        executor.execute(new Runnable() {
-            @Override
-            public void run() {
-                database.noteDao().insertAll(SampleData.getNotes());
-            }
-        });
+        executor.execute(() -> database.noteDao().insertAll(SampleData.getNotes()));
     }
 
     private LiveData<List<NoteEntity>> getAllNotes() {
@@ -42,12 +37,7 @@ public class AppRepository {
     }
 
     public void deleteAllNotes() {
-        executor.execute(new Runnable() {
-            @Override
-            public void run() {
-                database.noteDao().deleteAll();
-            }
-        });
+        executor.execute(() -> database.noteDao().deleteAll());
     }
 
     public NoteEntity getNoteById(int idNote) {
@@ -55,20 +45,10 @@ public class AppRepository {
     }
 
     public void insertNote(final NoteEntity note) {
-        executor.execute(new Runnable() {
-            @Override
-            public void run() {
-                database.noteDao().insertNote(note);
-            }
-        });
+        executor.execute(() -> database.noteDao().insertNote(note));
     }
 
     public void deleteNote(final NoteEntity noteEntity) {
-        executor.execute(new Runnable() {
-            @Override
-            public void run() {
-                database.noteDao().deleteNote(noteEntity);
-            }
-        });
+        executor.execute(() -> database.noteDao().deleteNote(noteEntity));
     }
 }

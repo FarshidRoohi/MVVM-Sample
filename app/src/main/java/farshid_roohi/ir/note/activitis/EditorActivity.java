@@ -1,9 +1,7 @@
 package farshid_roohi.ir.note.activitis;
 
-import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -14,9 +12,8 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import farshid_roohi.ir.note.Utilites.Constants;
-import farshid_roohi.ir.note.database.NoteEntity;
-import farshid_roohi.ir.plainolnote.R;
 import farshid_roohi.ir.note.viewModel.EditorViewModel;
+import farshid_roohi.ir.plainolnote.R;
 
 public class EditorActivity extends AppCompatActivity {
 
@@ -87,12 +84,9 @@ public class EditorActivity extends AppCompatActivity {
     private void initViewModel() {
         this.mViewModel = ViewModelProviders.of(this).get(EditorViewModel.class);
 
-        this.mViewModel.mLiveNote.observe(this, new Observer<NoteEntity>() {
-            @Override
-            public void onChanged(@Nullable NoteEntity noteEntity) {
-                if (noteEntity != null && !mEditing) {
-                    textNote.setText(noteEntity.getText());
-                }
+        this.mViewModel.mLiveNote.observe(this, noteEntity -> {
+            if (noteEntity != null && !mEditing) {
+                textNote.setText(noteEntity.getText());
             }
         });
 

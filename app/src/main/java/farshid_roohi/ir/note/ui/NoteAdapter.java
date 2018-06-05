@@ -37,13 +37,10 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
     public void onBindViewHolder(@NonNull final NoteViewHolder holder, int position) {
         final NoteEntity item = list.get(position);
         holder.noteText.setText(item.getText());
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(holder.itemView.getContext(), EditorActivity.class);
-                intent.putExtra(Constants.NOTE_ID_KEY, item.getId());
-                holder.itemView.getContext().startActivity(intent);
-            }
+        holder.itemView.setOnClickListener(view -> {
+            Intent intent = new Intent(holder.itemView.getContext(), EditorActivity.class);
+            intent.putExtra(Constants.NOTE_ID_KEY, item.getId());
+            holder.itemView.getContext().startActivity(intent);
         });
     }
 
@@ -62,7 +59,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
         @BindView(R.id.note_text)
         TextView noteText;
 
-        public NoteViewHolder(View itemView) {
+        NoteViewHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this, itemView);
         }
