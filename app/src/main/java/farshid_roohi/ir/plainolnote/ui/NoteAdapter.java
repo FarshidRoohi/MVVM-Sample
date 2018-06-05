@@ -39,13 +39,12 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
     public void onBindViewHolder(@NonNull final NoteViewHolder holder, int position) {
         final NoteEntity item = list.get(position);
         holder.noteText.setText(item.getText());
-        holder.itemView.setTag(item);
-        holder.fab.setOnClickListener(new View.OnClickListener() {
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(holder.fab.getContext(), EditorActivity.class);
+                Intent intent = new Intent(holder.itemView.getContext(), EditorActivity.class);
                 intent.putExtra(NOTE_ID_KEY, item.getId());
-                holder.fab.getContext().startActivity(intent);
+                holder.itemView.getContext().startActivity(intent);
             }
         });
     }
@@ -63,9 +62,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
     public class NoteViewHolder extends RecyclerView.ViewHolder {
 
         @BindView(R.id.note_text)
-        TextView             noteText;
-        @BindView(R.id.fab)
-        FloatingActionButton fab;
+        TextView noteText;
 
         public NoteViewHolder(View itemView) {
             super(itemView);
