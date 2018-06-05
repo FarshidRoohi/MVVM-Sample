@@ -11,10 +11,10 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
-import farshid_roohi.ir.plainolnote.Utilites.SampleData;
-import farshid_roohi.ir.plainolnote.database.AppDatabase;
-import farshid_roohi.ir.plainolnote.database.NoteDao;
-import farshid_roohi.ir.plainolnote.database.NoteEntity;
+import farshid_roohi.ir.note.Utilites.SampleData;
+import farshid_roohi.ir.note.database.AppDatabase;
+import farshid_roohi.ir.note.database.NoteDao;
+import farshid_roohi.ir.note.database.NoteEntity;
 
 import static org.junit.Assert.*;
 

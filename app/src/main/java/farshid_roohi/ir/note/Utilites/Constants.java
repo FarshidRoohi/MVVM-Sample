@@ -1,4 +1,4 @@
-package farshid_roohi.ir.plainolnote.Utilites;
+package farshid_roohi.ir.note.Utilites;
 
 public class Constants {
     public static final String NOTE_ID_KEY = "NOTE_ID_KEY";

@@ -1,4 +1,4 @@
-package farshid_roohi.ir.plainolnote.viewModel;
+package farshid_roohi.ir.note.viewModel;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
@@ -7,26 +7,26 @@ import android.support.annotation.NonNull;
 
 import java.util.List;
 
-import farshid_roohi.ir.plainolnote.database.AppRepository;
-import farshid_roohi.ir.plainolnote.database.NoteEntity;
+import farshid_roohi.ir.note.database.AppRepository;
+import farshid_roohi.ir.note.database.NoteEntity;
 
 public class MainViewModel extends AndroidViewModel {
 
     public  LiveData<List<NoteEntity>> notes;
-    private AppRepository              mRepositorys;
+    private AppRepository              appRepository;
 
     public MainViewModel(@NonNull Application application) {
         super(application);
-        this.mRepositorys = AppRepository.getInstance(application.getApplicationContext());
-        this.notes = this.mRepositorys.notes;
+        this.appRepository = AppRepository.getInstance(application.getApplicationContext());
+        this.notes = this.appRepository.notes;
 
     }
 
     public void addSampleData() {
-        this.mRepositorys.addSampleData();
+        this.appRepository.addSampleData();
     }
 
     public void deleteAllNotes() {
-        this.mRepositorys.deleteAllNotes();
+        this.appRepository.deleteAllNotes();
     }
 }

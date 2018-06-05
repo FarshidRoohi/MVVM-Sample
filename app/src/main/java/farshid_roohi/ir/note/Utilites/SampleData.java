@@ -1,4 +1,4 @@
-package farshid_roohi.ir.plainolnote.Utilites;
+package farshid_roohi.ir.note.Utilites;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -6,12 +6,12 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-import farshid_roohi.ir.plainolnote.database.NoteEntity;
+import farshid_roohi.ir.note.database.NoteEntity;
 
 public class SampleData {
 
 
-    public static final String SAMPLE_TEXT_1 = "A Sample Note";
+    public static final String SAMPLE_TEXT_1 = "My note";
     public static final String SAMPLE_TEXT_2 = "A Note With a \n Feed";
     public static final String SAMPLE_TEXT_3 = "It is a long established \n" +
             "fact that a reader will be distracted by the readable content of a page when looking at its layout.\n\n" +

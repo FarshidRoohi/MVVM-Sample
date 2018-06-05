@@ -1,26 +1,22 @@
-package farshid_roohi.ir.plainolnote.activitis;
+package farshid_roohi.ir.note.activitis;
 
 import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import farshid_roohi.ir.note.Utilites.Constants;
+import farshid_roohi.ir.note.database.NoteEntity;
 import farshid_roohi.ir.plainolnote.R;
-import farshid_roohi.ir.plainolnote.Utilites.Constants;
-import farshid_roohi.ir.plainolnote.database.NoteEntity;
-import farshid_roohi.ir.plainolnote.viewModel.EditorViewModel;
+import farshid_roohi.ir.note.viewModel.EditorViewModel;
 
 public class EditorActivity extends AppCompatActivity {
 

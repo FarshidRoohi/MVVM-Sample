@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "farshid_roohi.ir.plainolnote"
+        applicationId "farshid_roohi.ir.note"
         minSdkVersion 19
         targetSdkVersion 27
         versionCode 1

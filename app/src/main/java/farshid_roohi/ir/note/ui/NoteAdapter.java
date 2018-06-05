@@ -1,8 +1,7 @@
-package farshid_roohi.ir.plainolnote.ui;
+package farshid_roohi.ir.note.ui;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,11 +12,10 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import farshid_roohi.ir.plainolnote.activitis.EditorActivity;
+import farshid_roohi.ir.note.Utilites.Constants;
+import farshid_roohi.ir.note.database.NoteEntity;
+import farshid_roohi.ir.note.activitis.EditorActivity;
 import farshid_roohi.ir.plainolnote.R;
-import farshid_roohi.ir.plainolnote.database.NoteEntity;
-
-import static farshid_roohi.ir.plainolnote.Utilites.Constants.NOTE_ID_KEY;
 
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder> {
 
@@ -43,7 +41,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(holder.itemView.getContext(), EditorActivity.class);
-                intent.putExtra(NOTE_ID_KEY, item.getId());
+                intent.putExtra(Constants.NOTE_ID_KEY, item.getId());
                 holder.itemView.getContext().startActivity(intent);
             }
         });

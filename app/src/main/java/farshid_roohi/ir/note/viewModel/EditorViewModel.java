@@ -1,4 +1,4 @@
-package farshid_roohi.ir.plainolnote.viewModel;
+package farshid_roohi.ir.note.viewModel;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
@@ -10,8 +10,8 @@ import java.util.Date;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-import farshid_roohi.ir.plainolnote.database.AppRepository;
-import farshid_roohi.ir.plainolnote.database.NoteEntity;
+import farshid_roohi.ir.note.database.AppRepository;
+import farshid_roohi.ir.note.database.NoteEntity;
 
 public class EditorViewModel extends AndroidViewModel {
 

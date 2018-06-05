@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".activitis.MainActivity"
+            android:name="farshid_roohi.ir.note.activitis.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -20,13 +20,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activitis.EditorActivity"
+            android:name="farshid_roohi.ir.note.activitis.EditorActivity"
             android:label="@string/title_activity_editor"
-            android:parentActivityName=".activitis.MainActivity"
+            android:parentActivityName="farshid_roohi.ir.note.activitis.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="farshid_roohi.ir.plainolnote.activitis.MainActivity" />
+                android:value="farshid_roohi.ir.plainolnote.farshid_roohi.ir.note.activitis.MainActivity" />
         </activity>
     </application>
 

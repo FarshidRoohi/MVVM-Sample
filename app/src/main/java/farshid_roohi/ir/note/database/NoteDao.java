@@ -1,4 +1,4 @@
-package farshid_roohi.ir.plainolnote.database;
+package farshid_roohi.ir.note.database;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;

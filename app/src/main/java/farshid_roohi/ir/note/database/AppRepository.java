@@ -1,4 +1,4 @@
-package farshid_roohi.ir.plainolnote.database;
+package farshid_roohi.ir.note.database;
 
 import android.arch.lifecycle.LiveData;
 import android.content.Context;
@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-import farshid_roohi.ir.plainolnote.Utilites.SampleData;
+import farshid_roohi.ir.note.Utilites.SampleData;
 
 public class AppRepository {
 

@@ -1,4 +1,4 @@
-package farshid_roohi.ir.plainolnote.database;
+package farshid_roohi.ir.note.database;
 
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.Ignore;

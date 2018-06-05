@@ -1,4 +1,4 @@
-package farshid_roohi.ir.plainolnote.activitis;
+package farshid_roohi.ir.note.activitis;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -19,10 +19,10 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import farshid_roohi.ir.note.database.NoteEntity;
+import farshid_roohi.ir.note.ui.NoteAdapter;
 import farshid_roohi.ir.plainolnote.R;
-import farshid_roohi.ir.plainolnote.database.NoteEntity;
-import farshid_roohi.ir.plainolnote.ui.NoteAdapter;
-import farshid_roohi.ir.plainolnote.viewModel.MainViewModel;
+import farshid_roohi.ir.note.viewModel.MainViewModel;
 
 public class MainActivity extends AppCompatActivity {
 
